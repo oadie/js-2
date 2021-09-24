@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>sum and average</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+    
+        <script> /* js code */ 
+        
+        var add = [];
+        var sum = 0;
+        var i = 0;
+        var next = 0;
+
+        while (next >= 0) {
+            var next = parseInt(prompt("type any number:"));
+            if (next >= 0){
+                add.push(next);
+                sum += next;
+                i++;
+            }
+        }
+        var average = sum/i;
+        document.write (`<h1>averange: ${average}
+            <br/>
+            sum: ${sum}
+            <br/>
+            of: ${add}</h1>`);
+        </script>
+    </body>
+</html>

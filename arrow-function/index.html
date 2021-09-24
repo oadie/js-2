@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>arow function</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+        
+        <!-- enlace con js -->
+        <script>
+
+            function sum (first, second){
+                return first+second;
+            };
+
+            const sum1 = (first, second => {
+                return first+second;
+            });
+
+            document.write(`<h2>${sum1(5, 2)}</h2>`);
+
+            /* con las funciones de flecha solo puedo llamar el resultado despues de la declaracion, en una funcion estandar */
+
+        </script>
+
+    </body>
+</html>

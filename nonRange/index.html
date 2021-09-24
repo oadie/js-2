@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>non in range</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; display: grid; place-content: center; padding: 15%;">
+    
+        <script>
+            const num = parseInt(prompt("num:"));
+            const last = parseInt(prompt("last num of te range:"));
+            
+            if (num < last){
+                var min = num;
+                var max = last;
+            }else{
+                var min = last;
+                var max = num;
+            } /* constantes no viven detro de llaves {} */
+    
+            var add = min;
+            var non = [];
+
+            while (max > add++) {
+                if (add%2 !== 0){
+                    if (add !== max){
+                        non.push(add);
+                    }
+                }   
+            }
+
+            if (non.length == 1){
+               const tellme = `<h2>Hi, beetwen the number ${min} and ${max}: <br/>${non} is non.</h2>`;
+               document.write(tellme);
+            }else{
+                const tellme = `<h2>Hi, beetwen the number ${min} and ${max}: <br/> ${non} are non.</h2>`;
+               document.write(tellme);
+            }
+
+            
+            
+        </script>
+        
+    </body>
+</html>

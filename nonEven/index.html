@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>non or even</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; display: grid; place-content: center; padding: 15%;">
+    
+        <script>
+            const num = parseInt(prompt("num:"));
+            
+            if (num%2 == 0){
+                var ne = "even"
+            }else{
+               var ne = "non"
+            }
+
+            const tellme = `<h2>Hi, the number ${num} is a ${ne} number.</h2>`;
+            document.write(tellme);
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>dividers</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+    
+        <script> /* js code */ 
+        
+        var list = [];
+        const num = parseInt(prompt("type any number:"));
+        
+        var div = -num;
+        while (div != num){
+            if (num%div === 0){
+                list.push(div);
+            }
+            div++;
+        }
+        list.push(div);
+        
+        document.write (`<h1>dividers of ${num}: <br/> ${list}</h1>`);
+
+        </script>
+    </body>
+</html>

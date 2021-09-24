@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>name</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+    
+        <script> /* js code */
+            const name = prompt("type your username:");
+            let message = "";
+
+            switch (name.toUpperCase()) {
+                case "DIEGO":
+                    message = "you are the admin, wellcome";
+                    break;
+                case "ROKO":
+                    message = "you are user, wellcome my friend :)";
+                    break;
+
+                default:
+                    message = "you will not pass :/";
+                    break;
+            }
+
+            document.write (message);
+        </script>
+    </body>
+</html>

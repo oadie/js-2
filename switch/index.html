@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>switch</title>
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+    
+        <script> /* js code */
+            const age = parseInt(prompt("type your age:"));
+            let message = "";
+
+            switch (age) {
+                case 18:
+                    message = "you are already legal in Mexico";
+                    break;
+                case 25:
+                    message = "you are already legal in USA";
+                    break;
+                case 70:
+                    message = "your are closer to death }:-)";
+                    break;
+
+                default:
+                    message = "I don´t have any message for you :(";
+                    break;
+            }
+
+            document.write (message);
+        </script>
+    </body>
+</html>
