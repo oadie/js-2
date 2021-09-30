@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>async await</title>
+</head>
+
+<body style="display: grid; place-content: center; padding: 15%;">
+
+    <button>new cat</button>
+    <div></div>
+    <!--  style="width: 30vw; overflow: hidden;" -->
+
+    <script>
+        "use strict";
+
+        const $btn = document.querySelector("button");
+        const $div = document.querySelector("div");
+
+        $btn.addEventListener("click", async() => {
+            const resp = await fetch('https://api.thecatapi.com/v1/images/search');
+            const data = await resp.json();
+
+            const cat = document.createElement("img");
+            cat.src = data[0].url;
+            cat.width = "300";
+
+            $div.appendChild(cat);
+        });
+
+       /*  $btn.addEventListener("click", () => {
+            fetch('https://api.thecatapi.com/v1/images/search')
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data);
+
+                    const cat = document.createElement("img");
+                    cat.src = data[0].url;
+                    cat.width = "300";
+
+                    $div.appendChild(cat);
+                });
+        }); */
+    </script>
+</body>
+
+</html>

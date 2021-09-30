@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>API dog</title>
+    </head>
+    <body style="display: grid; place-content: center; padding: 15%;">
+        
+        <button>new dog</button>
+        <div></div>
+        <!-- style="width: 30%;" -->
+        
+        <script>
+            const $btn = document.querySelector("button");
+            const $div = document.querySelector("div");
+
+            $btn.addEventListener("click", () => {
+                fetch('https://dog.ceo/api/breeds/image/random')
+                    .then(resp => resp.json())
+                    .then(data => {
+                    console.log(data);
+                    
+                    const dog = document.createElement("img");
+                    dog.src = data.message;
+                    
+                    $div.appendChild(dog);
+                    /* document.body.append(dog); */
+                });
+            });
+        </script>
+    </body>
+</html>
